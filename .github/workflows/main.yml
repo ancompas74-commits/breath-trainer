@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm ci
+      - run: npm install
       - run: npx cross-env USE_DATABASE=false OUTPUT_MODE=export next build
       - uses: actions/upload-pages-artifact@v3
         with:
